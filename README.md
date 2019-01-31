@@ -11,7 +11,7 @@ Finally you have to execute the script `./jumpcoind_install.sh`
 
 ___
 
-After a time you need to enter a RpcUser and a Rpc Password.
+After a time you need to enter a RpcUser and a RpcPassword.
 
 Save the answers when you want to setup the [Multicoin Faucet] (https://github.com/WlanWerner/Multicoin-Faucet)
 

@@ -12,6 +12,7 @@ sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-to
 mkdir /root/.jumpcoin
 wget https://github.com/Jumperbillijumper/jumpcoin/releases/download/1/jumpcoind
 mv jumpcoind /root/jumpcoind
+cd ~
 chmod 777 jumpcoind
 ./jumpcoind
 #rpcuser + rpcpassword

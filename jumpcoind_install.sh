@@ -6,8 +6,34 @@ sudo apt-get upgrade -y
 sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:bitcoin/bitcoin -y
 sudo apt-get update
+
+if [[ `lsb_release -rs` == "17.10" || "18.04" ]] #Check the Version
+then
+
+sudo apt-get install unzip nano git build-essential libtool autotools-dev autoconf automake libssl-dev libminiupnpc-dev libqt4-dev libprotobuf-dev protobuf-compiler libqrencode-dev -y
+sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libdb++-dev libminiupnpc-dev libqrencode-dev -y
+
+sudo apt-get install g++ python-dev autotools-dev libicu-dev libbz2-dev -y
+wget -O boost_1_58_0.tar.gz https://sourceforge.net/projects/boost/files/boost/1.58.0/boost_1_58_0.tar.gz/download
+tar -xvzf boost_1_58_0.tar.gz
+cd boost_1_58_0/
+
+./bootstrap.sh --prefix=/usr/local
+user_configFile=`find $PWD -name user-config.jam`
+echo "using mpi ;" >> $user_configFile
+n=`cat /proc/cpuinfo | grep "cpu cores" | uniq | awk '{print $NF}'`
+sudo ./b2 --with=all -j $n install
+sudo sh -c 'echo "/usr/local/lib" >> /etc/ld.so.conf.d/local.conf'
+sudo ldconfig
+cd ~
+
+else 
+
 sudo apt-get install unzip nano git build-essential libtool autotools-dev autoconf automake libssl-dev libboost-all-dev libdb4.8-dev libdb4.8++-dev libminiupnpc-dev libqt4-dev libprotobuf-dev protobuf-compiler libqrencode-dev -y
 sudo apt-get install git qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools build-essential libboost-dev libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libdb++-dev libminiupnpc-dev libqrencode-dev -y
+
+fi
+
 #create folder + get jumpcoind + execute jumpcoind
 mkdir /root/.jumpcoin
 wget https://github.com/Jumperbillijumper/jumpcoin/releases/download/1/jumpcoind

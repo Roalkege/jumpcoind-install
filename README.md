@@ -10,6 +10,4 @@ Save the answers when you want to setup the [Multicoin Faucet] (https://github.c
 
 ___
 
-Then open a new console and close the old one.
-
 Now type `./jumpcoind getblockcount` to see how many blocks are loaded or  `./jumpcoind getconnectioncount` for the number of connections to your wallet.

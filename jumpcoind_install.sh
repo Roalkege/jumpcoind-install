@@ -34,4 +34,4 @@ maxconnections=12
 EOF
 cd ~
 #execute jumpcoind
-./jumpcoind
+./jumpcoind -deamon

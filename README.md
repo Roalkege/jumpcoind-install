@@ -1,5 +1,5 @@
 # jumpcoind-install
-This is a skript to install the jumpcoind on a ubuntu 16.04 vps
+This is a skript to install the jumpcoind on a ubuntu 16.04/17.10/18.04 vps
 
 Execute only this command `sudo git clone https://github.com/Roalkege/jumpcoind-install.git && cd jumpcoind-install/ && sudo bash jumpcoind_install.sh`
 ___

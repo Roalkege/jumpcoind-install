@@ -1,7 +1,7 @@
 # jumpcoind-install
 This is a skript to install the jumpcoind on a ubuntu 16.04/17.10/18.04 vps
 
-Execute only this command `sudo git clone https://github.com/Roalkege/jumpcoind-install.git && cd jumpcoind-install/ && sudo bash jumpcoind_install.sh`
+Execute only this command `wget https://raw.githubusercontent.com/Roalkege/jumpcoind-install/master/jumpcoind_install.sh &&  bash jumpcoind_install.sh`
 ___
 
 After a time you need to enter a RpcUser and a RpcPassword.

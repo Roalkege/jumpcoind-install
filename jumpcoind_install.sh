@@ -59,5 +59,10 @@ rpcpassword=$password
 maxconnections=12
 EOF
 cd ~
+rm jumpcoind_install.sh
+rm -rf boost_1_58_0 
+rm -rf boost_1_58_0.tar.gz
+echo The Wallet is now starting and you wont see anything below, but the Wallet has started. Just close this terminal and open a new one.
 #execute jumpcoind
 ./jumpcoind -deamon
+

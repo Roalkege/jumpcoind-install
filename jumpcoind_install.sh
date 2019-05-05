@@ -7,7 +7,7 @@ sudo apt-get install software-properties-common -y
 sudo add-apt-repository ppa:bitcoin/bitcoin -y
 sudo apt-get update
 
-if [[ `lsb_release -rs` == "17.10"  ]] || [[ `lsb_release -rs` == "18.04"  ]] || [[ `lsb_release -rs` == "19.04"  ]]#Check the Version
+if [[ `lsb_release -rs` == "17.10"  ]] || [[ `lsb_release -rs` == "18.04"  ]] || [[ `lsb_release -rs` == "19.04"  ]] #Check the Version
 then
 
 sudo apt-get install unzip nano git build-essential libtool autotools-dev autoconf automake libssl-dev libminiupnpc-dev libqt4-dev libprotobuf-dev protobuf-compiler libqrencode-dev -y
